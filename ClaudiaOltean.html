@@ -1,0 +1,118 @@
+<!Doctype Html>
+<HTML>
+<head>
+<link rel="stylesheet" href="Claudia.css">
+<script>
+function slideshow()
+{
+var x=document.getElementsByClassName("slideshow-container");
+var y=document.getElementsByClassName("imagini");
+y.style.display="none";
+x.style.display="block";
+}
+</script>
+</head>
+<body>
+ <h1>Claudia-Daniela OLTEAN</h1>
+ <p>claudiaoltean12@yahoo.com</p><br>
+ <h2>Specificatii tehnice ale statiei principale de lucru </h2>
+ <table>
+ <tr>
+    <th>Denumire Componenta</th>
+    <th>Producator</th>
+    <th>Parametrii</th>
+ </tr>
+ <tr>
+    <td>CPU</td>
+    <td>Intel i7</td>
+    <td>Model: 1065G7</td>
+ </tr>
+  <tr>
+    <td>Memorie</td>
+    <td>DDR4</td>
+    <td>Memorie integrata: 16384 MB</td>
+  </tr>
+  <tr>
+    <td>Placa video</td>
+    <td>nVidia GeForce MX</td>
+    <td>Model placa video: MX350</td>
+  </tr>
+  </table>
+  <br>
+  <h2>Structura retelei personale si accesul la internet</h2>
+  <img src="imagine1.jpg">
+  <h3>Caracteristicile conexiunii la retea</h3>
+  <ul>
+    <li>Adresa MAC: A8-7E-EA-D8-40-FA </li>
+	<li>Adresa IP:  192.168.100.35 </li>
+	<li>Debit la download: 16.48 Mbps</li>
+	<li>Debit la upload: 20.88 Mbps</li>
+  </ul>
+   <h2 id="Utilizarea Resurselor">Utilizarea Resurselor (slideshow)</h2>
+    <button type="button" ondblclick="slideshow()">Utilizarea Resurselor (Slideshow)</button>
+  <div class="slideshow-container">
+<div class="mySlides fade">
+  <div class="numbertext">1 / 6</div>
+  <img src="prt1.jpg" style="width:50%">
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">2 / 6</div>
+  <img src="prt2.jpg" style="width:50%">
+</div>
+<div class="mySlides fade">
+  <div class="number text">3 / 6</div>
+  <img src="prt3.jpg" style="width:50%">
+</div>
+<div class="mySlides fade">
+ <div class="number text">4 / 6</div>
+ <img src="prt4.jpg" style="width:50%">
+</div>
+<div class="mySlides fade">
+ <div class="number text">5 / 6</div>
+ <img src="prt5.jpg" style="width:50%">
+</div>
+<div class="mySlides fade">
+ <div class="number text">6 / 6</div>
+ <img src="prt6.jpg" style="width:50%">
+</div>
+<br>
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+</div>
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 3000); //
+}
+</script>
+<div class="imagini">
+  <img src="prt1.jpg">
+  <img src="prt2.jpg">
+  <img src="prt3.jpg">
+  <img src="prt4.jpg">
+  <img src="prt5.jpg">
+  <img src="prt6.jpg">
+ </div>
+ </Body>
+ </HTML>
+ 
